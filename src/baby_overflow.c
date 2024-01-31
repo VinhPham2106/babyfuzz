@@ -1,7 +1,10 @@
 #include <stdlib.h>
 #include "baby.h"
 #include <string.h>
+#include <stdio.h>
+
 void badFunction(char *input) {
-	char buff[8];
-	memcpy(buff, input, strlen(input));
+	char buff[10];
+	strcpy(buff, input);
+	//printf("%s", buff);
 }

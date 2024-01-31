@@ -11,5 +11,8 @@ asan:
 
 memory:
 	$(CC) -g -O1 -fsanitize=fuzzer,memory baby_overflow.c fuzz_target.c -o fuzz
+
+ubsan:
+	$(CC) -g -O1 -fsanitize=fuzzer,undefined baby_overflow.c fuzz_target.c -o fuzz
 clean:
 	rm -f baby fuzz
